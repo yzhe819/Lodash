@@ -8,7 +8,7 @@ it("remove all the false from array", () => {
 it("remove all the zero items from array", () => {
     expect(compact(["a", "b", "c", 0, 0])).toStrictEqual(["a", "b", "c"]);
 });
-it("remove all the emtry string from array", () => {
+it("remove all the empty string from array", () => {
     expect(compact(["a", "b", "c", "", ""])).toStrictEqual(["a", "b", "c"]);
 });
 it("remove all the null from array", () => {
@@ -19,4 +19,10 @@ it("remove all the NaN from array", () => {
 });
 it("overall testing", () => {
     expect(compact([undefined, false, 0, NaN, null, ""])).toStrictEqual([]);
+});
+it("empty input", () => {
+    expect(compact(null)).toStrictEqual([]);
+});
+it("invalid input", () => {
+    expect(compact(null)).toStrictEqual([]);
 });
