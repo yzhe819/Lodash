@@ -1,0 +1,14 @@
+{
+    "name": "lodash",
+    "version": "1.0.0",
+    "description": "YOU MIGHT NOT NEED LODASH",
+    "main": "./index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@babel/preset-env": "^7.16.11",
+        "jest": "^27.5.1"
+    }
+}
