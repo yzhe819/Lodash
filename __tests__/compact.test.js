@@ -21,7 +21,7 @@ it("overall testing", () => {
     expect(compact([undefined, false, 0, NaN, null, ""])).toStrictEqual([]);
 });
 it("empty input", () => {
-    expect(compact(null)).toStrictEqual([]);
+    expect(compact([])).toStrictEqual([]);
 });
 it("invalid input", () => {
     expect(compact(null)).toStrictEqual([]);
