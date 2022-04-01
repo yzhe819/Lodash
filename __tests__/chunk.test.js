@@ -11,3 +11,9 @@ it("split array into chunks of size three", () => {
         ["d"],
     ]);
 });
+it("split array into chunks of size zero", () => {
+    expect(chunk(["a", "b", "c", "d"], 0)).toStrictEqual([]);
+});
+it("split array into chunks of negative size", () => {
+    expect(chunk(["a", "b", "c", "d"], -1)).toStrictEqual([]);
+});
