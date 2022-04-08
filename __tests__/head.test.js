@@ -1,15 +1,15 @@
 import head from "../head";
 let array = [1, 2, 3, 4];
 
-it("should return the first element", function () {
+it("should return the first element", () => {
   expect(head(array)).toStrictEqual(1);
 });
 
-it("should return `undefined` when querying empty arrays", function () {
+it("should return `undefined` when querying empty arrays", () => {
   expect(head([])).toStrictEqual(undefined);
 });
 
-it("should work as an iteratee for methods like `_.map`", function () {
+it("should work as an iteratee for methods like `_.map`", () => {
   let array = [
     [1, 2, 3],
     [4, 5, 6],

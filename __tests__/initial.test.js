@@ -1,11 +1,11 @@
 import initial from "../initial";
-it("should exclude last element", function () {
+it("should exclude last element", () => {
   expect(initial([1, 2, 3])).toStrictEqual([1, 2]);
 });
-it("should return an empty when querying empty arrays", function () {
+it("should return an empty when querying empty arrays", () => {
   expect(initial([])).toStrictEqual([]);
 });
-it("should work as an iteratee for methods like `_.map`", function () {
+it("should work as an iteratee for methods like `_.map`", () => {
   const actual = [
     [1, 2, 3],
     [4, 5, 6],
