@@ -1,6 +1,6 @@
 import fill from '../fill';
 let array = [1, 2, 3];
-let falsey = [, null, undefined, false, 0, NaN, ''];
+let falsy = [, null, undefined, false, 0, NaN, ''];
 let largeValues = [3, 4, Math.pow(2, 32), Infinity];
 let negativeValues = [0, -1, -3, -4, -Infinity];
 beforeEach(() => {
@@ -20,8 +20,8 @@ it('should work with a `start` >= `length`', () => {
         expect(fill(array, 'a', value)).toStrictEqual([1, 2, 3]);
     });
 });
-it('should treat falsey `start` values as `0`', () => {
-    falsey.forEach(value => {
+it('should treat falsy `start` values as `0`', () => {
+    falsy.forEach(value => {
         expect(fill(array, 'a', value)).toStrictEqual(['a', 'a', 'a']);
     });
 });
@@ -47,8 +47,8 @@ it('should work with a `end` >= `length`', () => {
         expect(fill(array, 'a', 0, value)).toStrictEqual(['a', 'a', 'a']);
     });
 });
-it('should treat falsey `end` values, except `undefined`, as `0`', () => {
-    falsey.forEach(value => {
+it('should treat falsy `end` values, except `undefined`, as `0`', () => {
+    falsy.forEach(value => {
         array = [1, 2, 3]; // need to re-init after full
         if (value === undefined) {
             expect(fill(array, 'a', 0, value)).toStrictEqual(['a', 'a', 'a']);

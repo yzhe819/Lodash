@@ -3,9 +3,9 @@ let array = [1, 2, 3];
 it('should drop the first two elements', () => {
     expect(drop(array, 2)).toStrictEqual([3]);
 });
-it('should treat falsey `n` values, except `undefined`, as `0`', () => {
-    let falsey = [, null, undefined, false, 0, NaN, ''];
-    falsey.forEach(value => {
+it('should treat falsy `n` values, except `undefined`, as `0`', () => {
+    let falsy = [, null, undefined, false, 0, NaN, ''];
+    falsy.forEach(value => {
         if (value === undefined) {
             expect(drop(array, value)).toStrictEqual([2, 3]);
         } else {
