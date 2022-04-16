@@ -5,10 +5,12 @@
     "main": "./index.js",
     "scripts": {
         "start": "node index.js",
-        "test": "jest"
+        "test": "jest",
+        "format": "npx prettier --write ."
     },
     "devDependencies": {
         "@babel/preset-env": "^7.16.11",
-        "jest": "^27.5.1"
+        "jest": "^27.5.1",
+        "prettier": "2.6.2"
     }
 }
