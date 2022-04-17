@@ -6,7 +6,6 @@ it('should modify the array and return removed elements', () => {
     expect(actual).toStrictEqual([2, 4]);
     expect(array).toStrictEqual([1, 3]);
 });
-
 it('should provide correct `predicate` arguments', () => {
     let argsList = [],
         array = [1, 2, 3],
@@ -54,32 +53,25 @@ it('should preserve holes in arrays', () => {
     let array = [1, 2, 3, 4];
     delete array[1];
     delete array[3];
-
     remove(array, function (n) {
         return n === 1;
     });
-
     expect(!('0' in array)).toBe(true);
     expect(!('2' in array)).toBe(true);
 });
-
 it('should treat holes as `undefined`', () => {
     let array = [1, 2, 3];
     delete array[1];
-
     let actual = remove(array, function (n) {
         return n == null;
     });
 
     expect(actual).toStrictEqual([undefined]);
 });
-
 it('should not mutate the array until all elements to remove are determined', () => {
     let array = [1, 2, 3];
-
     remove(array, function (n, index) {
         return isEven(index);
     });
-
     expect(array).toStrictEqual([2]);
 });
