@@ -296,3 +296,8 @@ YOU MIGHT NOT NEED LODASH
 -   [ ] upperCase
 -   [ ] upperFirst
 -   [ ] words
+
+### Reference
+
+-   [YOU MIGHT NOT NEED LODASH](https://youmightnotneed.com/lodash)
+-   [Lodash](https://lodash.com/docs/4.17.15)
