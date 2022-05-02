@@ -1,3 +1,4 @@
+// Reverses array
 const reverse = array => {
     return array.reverse();
 };
